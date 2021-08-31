@@ -19,8 +19,6 @@ function generateResult() {
     output = input.indexOf(" ");
   } else if (value === "middlename") {
     output = input.substring(input.indexOf(" ") + 1, input.lastIndexOf(" "));
-    //  input.indexOf(" "), input.lastIndexOf(" ");
-    // missing first and last index number
   } else if (value === "filename") {
     // output = input.match("png") + input.match("jpg");
     // output = input.substring(input.indexOf("jpg", input.indexOf("jpg")));
