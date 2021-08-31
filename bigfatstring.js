@@ -14,16 +14,21 @@ function generateResult() {
     output = input.substring(0, 1).toUpperCase() + input.substring(1).toLowerCase();
   } else if (value === "firstname") {
     output = input.substring(input.indexOf(" "), input.substring(input.lastIndexOf(" ")));
+    // input.split(" ")[0].length
   } else if (value === "lengthoffirstname") {
     output = input.indexOf(" ");
   } else if (value === "middlename") {
     output = input.substring(input.indexOf(" ") + 1, input.lastIndexOf(" "));
+    //  input.indexOf(" "), input.lastIndexOf(" ");
     // missing first and last index number
   } else if (value === "filename") {
     // output = input.match("png") + input.match("jpg");
     // output = input.substring(input.indexOf("jpg", input.indexOf("jpg")));
-    output = input.endsWith(".png");
-    // notworkingcorrectly
+    if (input.endsWith(".jpg")) {
+      output = input.endsWith(".jpg");
+    } else if (input.endsWith(".png")) {
+      output = input.endsWith(".png");
+    }
   } else if (value === "password") {
     const regex = /[a-z]/gi;
     output = input.replaceAll(regex, "*");
